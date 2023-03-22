@@ -1,8 +1,5 @@
-A = [
-    [1, 2, 3, 4],
-    [-2, 1, -8, 7],
-    [0, 1, 1, 4],
-]
+import numpy as np
+
 def displayRow(matrix):
     for row in matrix:
         print(row,'\n')
@@ -55,11 +52,4 @@ def Mutil2Matrix(A,B):
                     result[i][j]+=A[i][k]*B[k][j]
     return result
 
-print("A:",A)
 
-B = tranpose(A)
-print("tranpose of A, B:",B)
-C = add2Matrix(A,A)
-print(" A + A = C:",C)
-D = Mutil2Matrix(A,B)
-print("A * B = D:",D)
