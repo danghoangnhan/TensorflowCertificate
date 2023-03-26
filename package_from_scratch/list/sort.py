@@ -1,17 +1,6 @@
-def findMax(sample):
-    index = 0
-    for i in range(len(sample)):
-        if sample[i]>sample[index]:
-            index = i
-    return index ,sample[index]
+from package_from_scratch.list.math import findMin
 
-def findMin(sample):
-    index = 0
-    for i in range(len(sample)):
-        if sample[i]<sample[index]:
-            index = i
-    return index ,sample[index]
-
+#Sorts the list.
 def bubbleSort(sample):
     i = len(sample)
     while i > 1:

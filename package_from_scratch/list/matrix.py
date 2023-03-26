@@ -1,5 +1,3 @@
-import numpy as np
-
 def displayRow(matrix):
     for row in matrix:
         print(row,'\n')
