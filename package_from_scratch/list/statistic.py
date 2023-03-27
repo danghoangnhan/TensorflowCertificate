@@ -1,7 +1,7 @@
 from package_from_scratch.list.math import length
 from package_from_scratch.list.sort import selectionSort
 from package_from_scratch.list.math import sumation,length,mean
-
+from package_from_scratch.list.math import findMax, findMin
 import math
 
 #   Computes the median. 
@@ -27,10 +27,8 @@ def mean_deviation(inputList:list):
 #   Computes the standard deviation.
 #   Standard Deviation is useful to give an idea about range of normal values(i.e. location of most of values).
 def standard_deviation(inputList:list):
-    meanValue = mean(inputList=inputList)
-    deviations = [(x - meanValue) ** 2 for x in inputList]
-    variance = sumation(deviations) / (length(inputList=inputList) - 1)
-    std_dev = math.sqrt(variance)
+    varianceValue = variance(inputList)
+    std_dev = math.sqrt(varianceValue)
     return std_dev
 
 #   Computes the variance. Variance is useful to see how the list of values varied 
@@ -48,3 +46,14 @@ def occurrence(inputList:list,value):
 def length(inputList:list):
     return len(inputList)
 
+#   Calculate the difference between max and min values using ptp() function
+def rangeMaxMin(inputList:list):
+    _,maxValue = findMax(inputList=inputList)
+    _,minValue = findMin(inputList=inputList)
+    return maxValue - minValue
+
+#   Computes the variance.
+#   Variance is useful to see how the list of values varied against the average.
+def variance(inputList:list):
+    meanValue = mean(inputList=inputList)
+    return sumation((i - meanValue) ** 2 for i in inputList) / length(inputList)

@@ -1,6 +1,11 @@
 import numpy as np
 import collections
 
+#   Computes the variance.
+#   Variance is useful to see how the list of values varied against the average.
+def variance(inputList:list):
+    return  np.var(inputList)
+
 #   Returns the max value.
 def findMax(inputList:list):
     return np.amax(inputList)
@@ -46,3 +51,12 @@ def sumation(inputList:list):
 def occurrence(inputList:list,value):
     counter = collections.Counter(inputList)
     return counter[value]
+
+
+#   Calculate the difference between max and min values using ptp() function
+def rangeMaxMin(inputList:list):
+    return np.ptp(inputList)
+
+#   Returns the length of list.
+def length(inputList:list):
+    return len(inputList)
