@@ -7,7 +7,6 @@ Created on Tue Dec 21 15:25:43 2021
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-# from keras.optimizers import SGD
 from tensorflow.keras.optimizers import SGD
 from imutils import paths
 import matplotlib.pyplot as plt

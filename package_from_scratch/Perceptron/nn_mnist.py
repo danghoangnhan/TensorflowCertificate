@@ -6,11 +6,12 @@ from sklearn.datasets import fetch_openml
 from keras.models import Sequential
 from keras.layers.core import Dense
 from tensorflow.keras.optimizers import SGD
-#from keras.optimizers import SGD
-#from sklearn import datasets
+# from keras.optimizers import SGD
+# from sklearn import datasets
 import matplotlib.pyplot as plt
 import numpy as np
-#import argparse
+
+# import argparse
 
 # construct the argument parse and parse the arguments
 # ap = argparse.ArgumentParser()
@@ -22,8 +23,7 @@ import numpy as np
 # script, the download may take a minute -- the 55MB MNIST dataset
 # will be downloaded)
 print("[INFO] loading MNIST (full) dataset...")
-#dataset = datasets.fetch_mldata("MNIST Original")
-
+# dataset = datasets.fetch_mldata("MNIST Original")
 
 
 dataset = fetch_openml('mnist_784')
@@ -32,7 +32,7 @@ dataset = fetch_openml('mnist_784')
 # construct the training and testing splits
 data = dataset.data.astype("float") / 255.0
 (trainX, testX, trainY, testY) = train_test_split(data,
-dataset.target, test_size=0.25)
+                                                  dataset.target, test_size=0.25)
 # convert the labels from integers to vectors
 lb = LabelBinarizer()
 trainY = lb.fit_transform(trainY)
@@ -47,15 +47,14 @@ model.add(Dense(10, activation="softmax"))
 print("[INFO] training network...")
 sgd = SGD(0.01)
 model.compile(loss="categorical_crossentropy", optimizer=sgd,
-metrics=["accuracy"])
+              metrics=["accuracy"])
 H = model.fit(trainX, trainY, validation_data=(testX, testY), epochs=100, batch_size=128)
 # evaluate the network
 print("[INFO] evaluating network...")
 predictions = model.predict(testX, batch_size=128)
 print(classification_report(testY.argmax(axis=1),
-predictions.argmax(axis=1),
-target_names=[str(x) for x in lb.classes_]))
-
+                            predictions.argmax(axis=1),
+                            target_names=[str(x) for x in lb.classes_]))
 
 # plot the training loss and accuracy
 plt.style.use("ggplot")
@@ -68,4 +67,4 @@ plt.title("Training Loss and Accuracy")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend()
-#plt.savefig(args["output"])
+# plt.savefig(args["output"])

@@ -13,9 +13,9 @@ from keras.applications import NASNetLarge
 
 # load the VGG16 network
 print("[INFO] loading network...")
-#model = VGG16(weights="imagenet", include_top = False)
-model = ResNet152V2(weights="imagenet", include_top = False)
-#model = InceptionV3(weights="imagenet", include_top = False) 
+# model = VGG16(weights="imagenet", include_top = False)
+model = ResNet152V2(weights="imagenet", include_top=False)
+# model = InceptionV3(weights="imagenet", include_top = False)
 
 print("[INFO] showing layers...")
 

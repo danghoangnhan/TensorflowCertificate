@@ -11,7 +11,7 @@ import numpy as np
 
 #########################ImageToArrayPreprocessor##############################
 # imports the img_to_array function from Keras
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.utils import img_to_array
 
 
 class ImageToArrayPreprocessor:
