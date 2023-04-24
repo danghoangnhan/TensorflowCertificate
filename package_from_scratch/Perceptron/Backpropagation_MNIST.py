@@ -5,13 +5,15 @@ Created on Thu Dec  9 03:39:10 2021
 @author: user
 """
 import numpy as np
+
+
 # import matplotlib.pyplot as plt
 
 class NeuralNetwork:
 
     def __init__(self, layers, alpha=0.1):
-        self.W = [] # list W is empty and initialize later
-        
+        self.W = []  # list W is empty and initialize later
+
         self.layers = layers
         self.alpha = alpha
         # layers: A list of integers which represents the actual architecture of the
@@ -22,7 +24,7 @@ class NeuralNetwork:
         # This value is applied during the weight update phase
         # start looping from the index of the first layers
         # but stop before we reach the last 2 layers
-        
+
         # initialize W
         # start looping over the number of layers in the network (i.e., len(layers)),
         # but we stop before the final two layer
@@ -42,6 +44,7 @@ class NeuralNetwork:
         # a bias term but the output does not
         w = np.random.randn(layers[-2] + 1, layers[-1])
         self.W.append(w / np.sqrt(layers[-2]))
+
     # this function is useful for debugging:
     def __repr__(self):
         # construct and return a string that represents the network
@@ -56,6 +59,7 @@ class NeuralNetwork:
         # compute the derivative of the sigmoid function ASSUMING that "x" has
         # already been passed through the sigmoid function
         return x * (1 - x)
+
     # note that whenever you perform backpropagation, you’ll always want to choose an
     # activation function that is differentiable
     # fit function: will be responsible for actually training our Neural Network
@@ -78,7 +82,7 @@ class NeuralNetwork:
             if epoch == 0 or (epoch + 1) % display_update == 0:
                 loss = self.calculate_loss(X, y)
                 print("[INFO] epoch={}, loss={:.7f}".format(
-					epoch + 1, loss))
+                    epoch + 1, loss))
 
     def fit_partial(self, x, y):
         # construct our list of output activations for each layer as our data
@@ -87,7 +91,7 @@ class NeuralNetwork:
         # x: An individual data point from our design matrix
         # y: The corresponding class label.
         A = [np.atleast_2d(x)]
-    # start the forward propagation phase
+        # start the forward propagation phase
         # FEEDFORWARD:
         # loop over the layers in the network
         for layer in np.arange(0, len(self.W)):
@@ -100,7 +104,7 @@ class NeuralNetwork:
             # activation function to the net input
             out = self.sigmoid(net)
 
-            #once we have the net output, add it to our list of activations
+            # once we have the net output, add it to our list of activations
             A.append(out)
 
         # BACKPROPAGATION:
@@ -143,6 +147,7 @@ class NeuralNetwork:
             # this value by some small learning rate and adding to our weight
             # matrix -- this is where the actual "learning" takes palce
             self.W[layer] += -self.alpha * A[layer].T.dot(D[layer])
+
     # used to calculate the loss across our entire training set
     # loss must be decrease
     def calculate_loss(self, X, targets):
@@ -170,6 +175,8 @@ class NeuralNetwork:
 
         # return the predicted value
         return p
+
+
 # construct the XOR dataset
 # X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 # y = np.array([[0], [1], [1], [0]])
@@ -202,11 +209,11 @@ print("[INFO] training network...")
 
 nn = NeuralNetwork([data.shape[1], 4, 10])
 
-print ("[INFO] {}".format(nn))
+print("[INFO] {}".format(nn))
 
 nn.fit(trainX, trainY, epochs=2000)
 
-print ("[INFO] evaluating network...")
+print("[INFO] evaluating network...")
 
 # Predict the test set.
 # Note that the predictions array has a shape of (450, 10) because there are
