@@ -1,4 +1,3 @@
-
 """
 Created on Mon Jul 20 22:05:43 2020
 
@@ -19,7 +18,7 @@ from keras.optimizers import RMSprop
 from keras.optimizers import SGD
 from keras.applications import ResNet152V2
 
-#from tensorflow.keras.applications.resnet50 import ResNet50
+# from tensorflow.keras.applications.resnet50 import ResNet50
 
 from keras.models import Model
 import imutils
@@ -32,6 +31,8 @@ import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt1
 ###############################################################################
 from keras.preprocessing.image import img_to_array
+
+
 class ImageToArrayPreprocessor:
 
     def __init__(self, dataFormat=None):
@@ -42,8 +43,10 @@ class ImageToArrayPreprocessor:
         # apply the the Keras utility function that correctly rearranges
         # the dimensions of the image
         return img_to_array(image, data_format=self.dataFormat)
+
+
 ###############################################################################
-        
+
 class AspectAwarePreprocessor:
     def __init__(self, width, height, inter=cv2.INTER_AREA):
         # store the target image width, height, and interpolation
@@ -51,6 +54,7 @@ class AspectAwarePreprocessor:
         self.width = width
         self.height = height
         self.inter = inter
+
     def preprocess(self, image):
         # grab the dimensions of the image and then initialize
         # the deltas to use when cropping
@@ -62,9 +66,9 @@ class AspectAwarePreprocessor:
         # update the deltas to crop the height to the desired dimension
         if w < h:
             image = imutils.resize(image, width=self.width, inter=self.inter)
-            dH = int((image.shape[0] - self.height) / 2.0) 
-        
-        # otherwise, the height is smaller than the width so
+            dH = int((image.shape[0] - self.height) / 2.0)
+
+            # otherwise, the height is smaller than the width so
         # resize along the height and then update the deltas
         # to crop along the width
         else:
@@ -77,48 +81,52 @@ class AspectAwarePreprocessor:
         # finally, resize the image to the provided spatial
         # dimensions to ensure our output image is always a fixed size
         return cv2.resize(image, (self.width, self.height), interpolation=self.inter)
+
+
 ###############################################################################
 class SimpleDatasetLoader:
-	def __init__(self, preprocessors=None):
-		# store the image preprocessor
-		self.preprocessors = preprocessors
+    def __init__(self, preprocessors=None):
+        # store the image preprocessor
+        self.preprocessors = preprocessors
 
-		# if the preprocessors are None, initialize them as an
-		# empty list
-		if self.preprocessors is None:
-			self.preprocessors = []
+        # if the preprocessors are None, initialize them as an
+        # empty list
+        if self.preprocessors is None:
+            self.preprocessors = []
 
-	def load(self, imagePaths, verbose=-1):
-		# initialize the list of features and labels
-		data = []
-		labels = []
+    def load(self, imagePaths, verbose=-1):
+        # initialize the list of features and labels
+        data = []
+        labels = []
 
-		# loop over the input images
-		for (i, imagePath) in enumerate(imagePaths):
-			# load the image and extract the class label assuming
-			# that our path has the following format:
-			# /path/to/dataset/{class}/{image}.jpg
-			image = cv2.imread(imagePath)
-			label = imagePath.split(os.path.sep)[-2]
+        # loop over the input images
+        for (i, imagePath) in enumerate(imagePaths):
+            # load the image and extract the class label assuming
+            # that our path has the following format:
+            # /path/to/dataset/{class}/{image}.jpg
+            image = cv2.imread(imagePath)
+            label = imagePath.split(os.path.sep)[-2]
 
-			# check to see if our preprocessors are not None
-			if self.preprocessors is not None:
-				# loop over the preprocessors and apply each to
-				# the image
-				for p in self.preprocessors:
-					image = p.preprocess(image)
+            # check to see if our preprocessors are not None
+            if self.preprocessors is not None:
+                # loop over the preprocessors and apply each to
+                # the image
+                for p in self.preprocessors:
+                    image = p.preprocess(image)
 
-			# treat our processed image as a "feature vector"
-			# by updating the data list followed by the labels
-			data.append(image)
-			labels.append(label)
+            # treat our processed image as a "feature vector"
+            # by updating the data list followed by the labels
+            data.append(image)
+            labels.append(label)
 
-			# show an update every `verbose` images
-			if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
-				print("[INFO] processed {}/{}".format(i + 1, len(imagePaths)))
+            # show an update every `verbose` images
+            if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
+                print("[INFO] processed {}/{}".format(i + 1, len(imagePaths)))
 
-		# return a tuple of the data and labels
-		return (np.array(data), np.array(labels))
+        # return a tuple of the data and labels
+        return (np.array(data), np.array(labels))
+
+
 ###############################################################################
 class FCHeadNet:
     @staticmethod
@@ -135,14 +143,16 @@ class FCHeadNet:
 
         # return the model
         return headModel
+
+
 ###############################################################################
 # construct the image generator for data augmentation
-aug = ImageDataGenerator(rotation_range=30, 
-                         width_shift_range=0.1, 
-                         height_shift_range=0.1, 
-                         shear_range=0.2, 
-                         zoom_range=0.2, 
-                         horizontal_flip=True, 
+aug = ImageDataGenerator(rotation_range=30,
+                         width_shift_range=0.1,
+                         height_shift_range=0.1,
+                         shear_range=0.2,
+                         zoom_range=0.2,
+                         horizontal_flip=True,
                          fill_mode="nearest")
 
 # grab the list of images that we’ll be describing, then extract
@@ -151,7 +161,7 @@ print("[INFO] loading images...")
 
 path_data = "D:/MCUT/Neural Network/datasets/animals"
 imagePaths = list(paths.list_images(path_data))
-#imagePaths = list(paths.list_images(args["dataset"]))
+# imagePaths = list(paths.list_images(args["dataset"]))
 classNames = [pt.split(os.path.sep)[-2] for pt in imagePaths]
 classNames = [str(x) for x in np.unique(classNames)]
 
@@ -163,7 +173,7 @@ iap = ImageToArrayPreprocessor()
 # load the dataset from disk then scale the raw pixel intensities to
 # the range [0, 1]
 sdl = SimpleDatasetLoader(preprocessors=[aap, iap])
-(data, labels) = sdl.load(imagePaths, verbose=1) ## verbose = 500
+(data, labels) = sdl.load(imagePaths, verbose=1)  ## verbose = 500
 data = data.astype("float") / 255.0
 
 # partition the data into training and testing splits using 75% of
@@ -179,7 +189,7 @@ testY = LabelBinarizer().fit_transform(testY)
 # off
 baseModel = ResNet152V2(weights="imagenet", include_top=False, input_tensor=Input(shape=(224, 224, 3)))
 
-#baseModel = ResNet50(include_top=False,weights='imagenet',input_shape = (224,224,3),pooling='max')
+# baseModel = ResNet50(include_top=False,weights='imagenet',input_shape = (224,224,3),pooling='max')
 
 # initialize the new head of the network, a set of FC layers
 # followed by a softmax classifier
@@ -193,13 +203,13 @@ model = Model(inputs=baseModel.input, outputs=headModel)
 # will *not* be updated during the training process
 for layer in baseModel.layers:
     layer.trainable = False
-    
+
 # compile our model (this needs to be done after our setting our
 # layers to being non-trainable
 print("[INFO] compiling model...")
 opt = RMSprop(lr=0.001)
-model.compile(loss="categorical_crossentropy", 
-              optimizer=opt, 
+model.compile(loss="categorical_crossentropy",
+              optimizer=opt,
               metrics=["accuracy"])
 
 # train the head of the network for a few epochs (all other
@@ -208,11 +218,11 @@ model.compile(loss="categorical_crossentropy",
 # versus pure random
 print("[INFO] training head...")
 num_epochs = 5
-H=model.fit_generator(aug.flow(trainX, trainY, batch_size=32), 
-                    validation_data=(testX, testY), 
-                    epochs=num_epochs, 
-                    steps_per_epoch=len(trainX) // 32, 
-                    verbose=1)
+H = model.fit_generator(aug.flow(trainX, trainY, batch_size=32),
+                        validation_data=(testX, testY),
+                        epochs=num_epochs,
+                        steps_per_epoch=len(trainX) // 32,
+                        verbose=1)
 
 model.save("E:/MCUT/Neural Networks/Day 4/fine_tuned_ResNet50_weights.hdf5")
 
@@ -229,36 +239,36 @@ plt.savefig("E:/MCUT/Neural Networks/Day 4/before_fine_tuningResNet50.png")
 # evaluate the network after initialization
 print("[INFO] evaluating after initialization...")
 predictions = model.predict(testX, batch_size=32)
-print(classification_report(testY.argmax(axis=1), 
-                            predictions.argmax(axis=1), 
+print(classification_report(testY.argmax(axis=1),
+                            predictions.argmax(axis=1),
                             target_names=classNames))
 # now that the head FC layers have been trained/initialized, lets
 # unfreeze the final set of CONV layers and make them trainable
 for layer in baseModel.layers[546:]:
     layer.trainable = True
-    
+
 # for the changes to the model to take affect we need to recompile
 # the model, this time using SGD with a *very* small learning rate
 print("[INFO] re-compiling model...")
 opt = SGD(lr=0.001)
 model.compile(loss="categorical_crossentropy", optimizer=opt,
-metrics=["accuracy"])
+              metrics=["accuracy"])
 
 # train the model again, this time fine-tuning *both* the final set
 # of CONV layers along with our set of FC layers
 print("[INFO] fine-tuning model...")
 
-H1 = model.fit_generator(aug.flow(trainX, trainY, batch_size=32), 
-                    validation_data=(testX, testY), 
-                    epochs=num_epochs, 
-                    steps_per_epoch=len(trainX) // 32, 
-                    verbose=1)
+H1 = model.fit_generator(aug.flow(trainX, trainY, batch_size=32),
+                         validation_data=(testX, testY),
+                         epochs=num_epochs,
+                         steps_per_epoch=len(trainX) // 32,
+                         verbose=1)
 
 # evaluate the network on the fine-tuned model
 print("[INFO] evaluating after fine-tuning...")
 predictions = model.predict(testX, batch_size=32)
 print(classification_report(testY.argmax(axis=1),
-predictions.argmax(axis=1), target_names=classNames))
+                            predictions.argmax(axis=1), target_names=classNames))
 
 # # save the model to disk
 # print("[INFO] serializing model...")
@@ -278,4 +288,3 @@ plt1.ylabel("Loss/Accuracy")
 plt1.legend()
 plt1.savefig("E:/MCUT/Neural Networks/Day 4/after_fine_tuningResNet50.png")
 plt1.show()
-

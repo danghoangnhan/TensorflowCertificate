@@ -3,16 +3,16 @@
 Created on Tue Dec 21 15:25:43 2021
 
 """
-# pip install imutils
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.model_selection import train_test_split
-from imutils import paths
 import numpy as np
+from imutils import paths
 # for ImageDataGenerator
 from keras.preprocessing.image import ImageDataGenerator
 #########################ImageToArrayPreprocessor##############################
 # imports the img_to_array function from Keras
-from keras.preprocessing.image import img_to_array
+from keras_preprocessing.image import img_to_array
+from sklearn.model_selection import train_test_split
+# pip install imutils
+from sklearn.preprocessing import LabelBinarizer
 
 
 class ImageToArrayPreprocessor:
@@ -131,7 +131,6 @@ class ShallowNet:
 
 
 ######################## Adaptive learning rates #############################
-from keras.callbacks import LearningRateScheduler
 
 
 def step_decay(epoch):
