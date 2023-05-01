@@ -12,6 +12,7 @@ from keras.layers.core import Flatten
 from keras.models import Sequential
 from keras.regularizers import l2
 
+
 class AlexNet:
     @staticmethod
     def build(width, height, depth, classes, reg=0.0002):
