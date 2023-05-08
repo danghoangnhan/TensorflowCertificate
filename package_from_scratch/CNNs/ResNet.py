@@ -8,7 +8,7 @@ from keras.layers.convolutional import AveragePooling2D
 from keras.layers.convolutional import Conv2D
 from keras.layers.core import Activation
 from keras.layers.core import Dense
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 from keras.models import Model
 from keras.regularizers import l2
 
