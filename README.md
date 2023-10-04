@@ -1,3 +1,0 @@
-# MCUT_DeepLearning
-
-##installation
