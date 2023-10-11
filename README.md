@@ -10,8 +10,9 @@ my repository  contains my notebook for tensorflow certificate exam
 
 - time series
 
-  - 2. **Daily Minimum Temperatures in Melbourne
-       1. **Link:**[Daily Minimum Temperatures in Melbourne Dataset on Kaggle](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)
-  - 1. **Sunspots**
+  - 1. **Daily Minimum Temperatures in Melbourne**
 
-    - **Link:** [Sunspots Dataset on Kaggle
+    - **Link:** [Daily Minimum Temperatures in Melbourne Dataset on Kaggle](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)
+
+    2. **Sunspots**
+  - - **Link:** [Sunspots Dataset on Kaggle](https://www.kaggle.com/datasets/robervalt/sunspots)
