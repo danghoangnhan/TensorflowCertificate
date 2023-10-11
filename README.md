@@ -10,12 +10,12 @@ my repository  contains my notebook for tensorflow certificate exam
 
 - Classification with Deep Neural Network
 
-    | Dataset        | Implementation                                           | Validation Accuracy  |
-    |----------------|-------------------------------------------------------   |----------------------|
-    | CIFAR-10       | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)    | 95.2%                |
-    | CIFAR-100      | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)  | 87.6%                |
-    | MNIST          | [mnist.ipynb](URL_to_MNIST_Notebook.ipynb)               | 98.65%               |
-    | Fashion MNIST  | [fashion_mnist.ipynb](URL_to_FashionMNIST_Notebook.ipynb)| 90.45%               |
+  | Dataset                                                                    | Implementation                                            | Validation Accuracy  |
+  |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
+  | [CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10)            | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)     | 47.98%               |
+  | [CIFAR-100](https://www.tensorflow.org/datasets/catalog/cifar100)          | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)   | 49.36%               |
+  | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](URL_to_MNIST_Notebook.ipynb)                | 98.65%               |
+  | [Fashion MNIST](https://www.tensorflow.org/datasets/catalog/fashion_mnist) | [fashion_mnist.ipynb](URL_to_FashionMNIST_Notebook.ipynb) | 90.45%               |
 
 - nlp
   - 1.News Headlines Dataset For Sarcasm Detection
