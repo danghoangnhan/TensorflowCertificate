@@ -8,5 +8,10 @@ my repository  contains my notebook for tensorflow certificate exam
 
 ### Dataset
 
-1. **Sunspots Dataset**
-   - **Link:** [Sunspots Dataset on Kaggle](https://www.kaggle.com/datasets/robervalt/sunspots)
+- time series
+
+  - 2. **Daily Minimum Temperatures in Melbourne
+       1. **Link:**[Daily Minimum Temperatures in Melbourne Dataset on Kaggle](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)
+  - 1. **Sunspots**
+
+    - **Link:** [Sunspots Dataset on Kaggle
