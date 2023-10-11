@@ -4,7 +4,7 @@ my repository  contains my notebook for tensorflow certificate exam
 
 ### Instruction
 
-- 🇻🇳 [Vietnamese](docs/instruction_vn.md)
+- 🇻🇳 [Vietnamese (from protonx)](docs/instruction_vn.md)
 
 ### Bench Mark
 
@@ -16,6 +16,8 @@ my repository  contains my notebook for tensorflow certificate exam
   | [CIFAR-100](https://www.tensorflow.org/datasets/catalog/cifar100)          | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)   | 49.36%               |
   | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](URL_to_MNIST_Notebook.ipynb)                | 98.65%               |
   | [Fashion MNIST](https://www.tensorflow.org/datasets/catalog/fashion_mnist) | [fashion_mnist.ipynb](URL_to_FashionMNIST_Notebook.ipynb) | 90.45%               |
+
+- Image Classification
 
 - nlp
   - 1.News Headlines Dataset For Sarcasm Detection
