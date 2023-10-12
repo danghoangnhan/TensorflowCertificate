@@ -34,4 +34,4 @@ my repository  contains my notebook for tensorflow certificate exam
     | Dataset                                                                                                                       | Implementation | MAE |
     |-------------------------------------------------------------------------------------------------------------------------------|-----------------|---------------|
     | [Daily Minimum Temperatures in Melbourne](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)| [DailyTemperature.ipynb](notebook/timeSeries/DailyTemperature.ipynb) | - |
-    | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                        | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb) | - |
+    | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                        | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb) | 0.037175447 |
