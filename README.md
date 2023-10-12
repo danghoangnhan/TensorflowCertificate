@@ -21,8 +21,8 @@ my repository  contains my notebook for tensorflow certificate exam
   | Dataset                                                                    | Implementation                                            | Validation Accuracy  |
   |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
   | [dogs-vs-cats](https://www.kaggle.com/c/dogs-vs-cats/data)            | [Cats_vs_Dogs.ipynb](notebook/ImageClassification/Cats_vs_Dogs.ipynb)     | 82.60%               |
-  | [Horses Or Humans Dataset](https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset)          | [cifar100.ipynb](notebook/ImageClassification/Horse-or-Human.ipynb)   | 49.36%               |
-  | [Rock Paper Scissors Dataset](https://www.kaggle.com/datasets/sanikamal/rock-paper-scissors-dataset)                 | [RockPaperScissors.ipynb](notebook/ImageClassification//RockPaperScissors.ipynb)                | 98.65%               |
+  | [Horses Or Humans Dataset](https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset)          | [cifar100.ipynb](notebook/ImageClassification/Horse-or-Human.ipynb)   | 95.31%               |
+  | [Rock Paper Scissors Dataset](https://www.kaggle.com/datasets/sanikamal/rock-paper-scissors-dataset)                 | [RockPaperScissors.ipynb](notebook/ImageClassification//RockPaperScissors.ipynb)                | 97.58%               |
 
 - Natural language processing
 
