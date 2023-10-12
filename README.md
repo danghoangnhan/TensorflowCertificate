@@ -1,6 +1,7 @@
-# Tensorflow certificate
+# TensorFlow Developer Certificate
 
-my repository  contains my notebook for tensorflow certificate exam
+my repository  contains my notebook for TensorFlow Developer Certificate
+
 
 ### Instruction
 
