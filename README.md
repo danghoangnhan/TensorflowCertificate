@@ -4,7 +4,7 @@ my repository  contains my notebook for tensorflow certificate exam
 
 ### Instruction
 
-- 🇻🇳 [Vietnamese (from protonx)](docs/instruction_vn.md)
+- 🇻🇳 [protonx](docs/instruction_vn.md)
 
 ### Bench Mark
 
