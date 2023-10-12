@@ -30,17 +30,10 @@ my repository  contains my notebook for tensorflow certificate exam
   - 1.News Headlines Dataset For Sarcasm Detection
   -
     - **Link:** [News Headlines Dataset For Sarcasm Detection on Kaggle](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection)
-  - Time Series
-  - 1. **Daily Minimum Temperatures in Melbourne**
 
-    - **Link:** [Daily Minimum Temperatures in Melbourne Dataset on Kaggle](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)
+- Time Series
 
-    1. **Sunspots**
-    - **Link:** [Sunspots Dataset on Kaggle](https://www.kaggle.com/datasets/robervalt/sunspots)
-
-  - Time Series
-
-    | Dataset                                                                                            | Implementation | MAE |
-    |---------------------------------------------------------------------------------------------------------------|-----------------|---------------|
-    | [Daily Minimum Temperatures in Melbourne](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)  | [DailyTemperature.ipynb](notebook/timeSeries/DailyTemperature.ipynb) | - |
-    | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                          | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb) | - |
+    | Dataset                                                                                                                       | Implementation | MAE |
+    |-------------------------------------------------------------------------------------------------------------------------------|-----------------|---------------|
+    | [Daily Minimum Temperatures in Melbourne](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne)| [DailyTemperature.ipynb](notebook/timeSeries/DailyTemperature.ipynb) | - |
+    | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                        | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb) | - |
