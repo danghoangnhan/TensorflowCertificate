@@ -48,13 +48,13 @@ Không được dùng lambda layer.
 
 - RNN, sentiment classification, chú ý sử dụng tokenizer + padding
 
-**Bài 5. Phân loại cảm xúc câu,  (chưa đổi đề)**
+<!-- **Bài 5. Phân loại cảm xúc câu,  (chưa đổi đề)**
 
 - Độ chính xác khoảng 84-87%
 - Tokenizer mỉa mai
-- Xây dựng mô hình RNN
+- Xây dựng mô hình RNN -->
 
-**Bài 6. Một bài Time-series: Sunspot trên coursera (chưa đổi đề)**
+**Bài 5. Một bài Time-series: Sunspot trên coursera (chưa đổi đề)**
 
 - MAE < 0.12
 - Min Max Scale
