@@ -14,19 +14,18 @@ my repository  contains my notebook for tensorflow certificate exam
   |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
   | [CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10)            | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)     | 47.98%               |
   | [CIFAR-100](https://www.tensorflow.org/datasets/catalog/cifar100)          | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)   | 49.36%               |
-  | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](URL_to_MNIST_Notebook.ipynb)                | 98.65%               |
+  | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](notebook/neuralNetwork/mnist.ipynb)                | 98.65%               |
   | [Fashion MNIST](https://www.tensorflow.org/datasets/catalog/fashion_mnist) | [fashion_mnist.ipynb](URL_to_FashionMNIST_Notebook.ipynb) | 90.45%               |
 
 - Image Classification
   | Dataset                                                                    | Implementation                                            | Validation Accuracy  |
   |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
-  | [CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10)            | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)     | 47.98%               |
-  | [CIFAR-100](https://www.tensorflow.org/datasets/catalog/cifar100)          | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)   | 49.36%               |
-  | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](URL_to_MNIST_Notebook.ipynb)                | 98.65%               |
-  | [Fashion MNIST](https://www.tensorflow.org/datasets/catalog/fashion_mnist) | [fashion_mnist.ipynb](URL_to_FashionMNIST_Notebook.ipynb) | 90.45%               |
-  
+  | [dogs-vs-cats](https://www.kaggle.com/c/dogs-vs-cats/data)            | [Cats_vs_Dogs.ipynb](notebook/ImageClassification/Cats_vs_Dogs.ipynb)     | 82.60%               |
+  | [Horses Or Humans Dataset](https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset)          | [cifar100.ipynb](notebook/ImageClassification/Horse-or-Human.ipynb)   | 49.36%               |
+  | [Rock Paper Scissors Dataset](https://www.kaggle.com/datasets/sanikamal/rock-paper-scissors-dataset)                 | [RockPaperScissors.ipynb](notebook/ImageClassification//RockPaperScissors.ipynb)                | 98.65%               |
+
 - Natural language processing
-    
+
     | Dataset                                                                    | Implementation                                            | Validation Accuracy  |
     |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
     | [News Headlines Dataset](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection)            | [news_sarcasm.ipynb](notebook/nlp/news_sarcasm.ipynb)     | 85.25%               |
