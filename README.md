@@ -29,7 +29,7 @@ my repository  contains my notebook for tensorflow certificate exam
     
     | Dataset                                                                    | Implementation                                            | Validation Accuracy  |
     |----------------------------------------------------------------------------|-----------------------------------------------------------|----------------------|
-    | [CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10)            | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)     | 47.98%               |
+    | [News Headlines Dataset](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection)            | [news_sarcasm.ipynb](notebook/nlp/news_sarcasm.ipynb)     | 85.25%               |
 - Time Series
 
     | Dataset                                                                                                                       | Implementation | MAE |
