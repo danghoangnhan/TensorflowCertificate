@@ -47,7 +47,9 @@ Không được dùng lambda layer.
 **Bài 4. Phân loại mỉa mai - Detecting sarcasm (chưa đổi đề)**
 
 - RNN, sentiment classification, chú ý sử dụng tokenizer + padding
-
+- Độ chính xác khoảng 84-87%
+- Tokenizer mỉa mai
+- Xây dựng mô hình RNN
 <!-- **Bài 5. Phân loại cảm xúc câu,  (chưa đổi đề)**
 
 - Độ chính xác khoảng 84-87%
