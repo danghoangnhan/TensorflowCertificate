@@ -41,4 +41,4 @@ my repository  contains my notebook for TensorFlow Developer Certificate
   | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                         | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb)                   | 0.037175447 |
 
 ### Certificate
-    ![Description of the image](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/84196603)
+  ![Description of the image](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/84196603)
