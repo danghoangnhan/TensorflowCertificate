@@ -12,7 +12,7 @@ my repository  contains my notebook for TensorFlow Developer Certificate
 
 
   | Dataset                                                                    | Implementation                                            | Validation Accuracy |
-  | ---------------------------------------------------------------------------- | ----------------------------------------------------------- | --------------------- |
+  | -------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------- |
   | [CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10)            | [cifar10.ipynb](notebook/neuralNetwork/cifar10.ipynb)     | 47.98%              |
   | [CIFAR-100](https://www.tensorflow.org/datasets/catalog/cifar100)          | [cifar100.ipynb](notebook/neuralNetwork/cifar100.ipynb)   | 49.36%              |
   | [MNIST](https://www.tensorflow.org/datasets/catalog/mnist)                 | [mnist.ipynb](notebook/neuralNetwork/mnist.ipynb)         | 98.65%              |
@@ -21,7 +21,7 @@ my repository  contains my notebook for TensorFlow Developer Certificate
 
 
   | Dataset                                                                                              | Implementation                                                                   | Validation Accuracy |
-  | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | --------------------- |
+  | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------- |
   | [dogs-vs-cats](https://www.kaggle.com/c/dogs-vs-cats/data)                                           | [Cats_vs_Dogs.ipynb](notebook/ImageClassification/Cats_vs_Dogs.ipynb)            | 99.10%              |
   | [Horses Or Humans Dataset](https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset)       | [cifar100.ipynb](notebook/ImageClassification/Horse-or-Human.ipynb)              | 95.31%              |
   | [Rock Paper Scissors Dataset](https://www.kaggle.com/datasets/sanikamal/rock-paper-scissors-dataset) | [RockPaperScissors.ipynb](notebook/ImageClassification//RockPaperScissors.ipynb) | 97.58%              |
@@ -29,12 +29,12 @@ my repository  contains my notebook for TensorFlow Developer Certificate
 
 
   | Dataset                                                                                                       | Implementation                                        | Validation Accuracy |
-  | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | --------------------- |
+  | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------- |
   | [News Headlines Dataset](https://www.kaggle.com/datasets/rmisra/news-headlines-dataset-for-sarcasm-detection) | [news_sarcasm.ipynb](notebook/nlp/news_sarcasm.ipynb) | 85.25%              |
 - Time Series
 
 
   | Dataset                                                                                                                        | Implementation                                                       | MAE         |
-  | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------- |
+  | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------- |
   | [Daily Minimum Temperatures in Melbourne](https://www.kaggle.com/datasets/paulbrabban/daily-minimum-temperatures-in-melbourne) | [DailyTemperature.ipynb](notebook/timeSeries/DailyTemperature.ipynb) | 0.0718      |
   | [Sunspots Dataset](https://www.kaggle.com/datasets/robervalt/sunspots)                                                         | [Sunspot.ipynb](notebook/timeSeries/Sunspot.ipynb)                   | 0.037175447 |
